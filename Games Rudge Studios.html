@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julio Basílio</title>
+    <style>
+        /* Estilos gerais (mantidos do código original) */
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: black;
+            padding-bottom: 50px; /* Adicionei um padding-bottom no body para acomodar o rodapé */
+        }
+
+        /* Estilos para o alerta */
+        .alerta {
+            display: none; /* Começa escondido */
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #ffcc00; /* Cor de fundo do alerta */
+            color: black;
+            text-align: center;
+            padding: 15px;
+            z-index: 1000; /* Garante que o alerta está acima do conteúdo */
+        }
+
+        /* Estilo para o botão de fechar */
+        .fechar {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        /* Media query para exibir o alerta apenas em dispositivos móveis */
+        @media (max-width: 768px) {
+            .alerta {
+                display: block; /* Mostra apenas em dispositivos móveis */
+            }
+        }
+
+        /* Estilos para o conteúdo principal (mantidos do código original) */
+        #imgagem {
+            text-align: center;
+            margin-top: 10vh;
+            filter: drop-shadow(10px 10px 20px dodgerblue);
+        }
+
+        img {
+            max-width: 70%;
+            height: auto;
+            border-radius: 50%;
+            padding: 20px;
+            background-color: rgba(50, 50, 50, 0.8);
+            border: 5px solid transparent;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        #nome {
+            color: white;
+            text-align: center;
+            margin-top: 2vh;
+            font-size: 150%;
+        }
+
+        #descricao {
+            text-align: center;
+            color: white;
+            font-size: 100%;
+            margin-top: 2vh;
+            line-height: 1.8;
+        }
+
+        .sites {
+            text-align: center;
+            margin-top: 2vh;
+        }
+
+        .sites a {
+            display: inline-block;
+            margin: 10px;
+            text-decoration: none;
+            background-color: dodgerblue;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .sites a:hover {
+            background-color: deepskyblue;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+
+        #contato {
+            text-align: center;
+            margin-top: 4vh;
+            color: white;
+        }
+
+        #contato p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .logotipo {
+            color: white;
+            padding: 15px 30px;
+            background-image: linear-gradient(45deg, dodgerblue, #2016f0);
+            border-radius: 30px;
+            font-size: 24px;
+            display: inline-block;
+            width: auto;
+            background-size: 200%;
+            animation: animacao-gradient 4s linear infinite;
+            transition: transform 0.3s ease;
+        }
+
+        .logotipo:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes animacao-gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Alerta para virar o telefone -->
+    <div class="alerta" id="alerta">
+        <p>Por favor, vire o seu telefone para melhor visualização.</p>
+        <span class="fechar" onclick="fecharAlerta()">Fechar [X]</span>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div id="imgagem">
+        <img src="J.png" alt="Pão">
+    </div>
+    <div id="nome">
+        <h1>Games Rudge Studios</h1>
+        <h3 class="logotipo">SUA IDEIA EM REALIDADE DIGITAL</h3>
+        <p id="descricao">Seja bem-vindo ao site da GR STUDIOS 
+            <br>especializada em criação de sites. 
+            <br>Estamos comprometidos com a qualidade e inovação para proporcionar soluções que atendam às suas necessidades.</p>
+        <br>
+        <p>Visite alguns de nossos projetos</p>
+        <div class="sites">
+            <a href="https://site1.com" target="_blank">Site de Login</a>
+            <a href="https://site2.com" target="_blank">Site de jogos</a>
+        </div>
+    </div>
+
+    <footer>
+        <h2>Informações de Contato</h2>
+        <p id="rodape4">Email: juliobasilio780@gmail.com</p>
+    </footer>
+
+    <!-- Script para fechar o alerta -->
+    <script>
+        function fecharAlerta() {
+            var alerta = document.getElementById('alerta');
+            alerta.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
