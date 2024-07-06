@@ -6,16 +6,17 @@
     <title>Julio Basílio</title>
     <link rel="shortcut icon" href="Grstudiosicon.ico">
     <style>
-        /* Estilos gerais (mantidos do código original) */
+        /* Estilos gerais */
         body {
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             margin: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column; /* Mudança para coluna */
             align-items: center;
             min-height: 100vh;
             background: black;
-            padding-bottom: 50px; /* Adicionei um padding-bottom no body para acomodar o rodapé */
+            padding-bottom: 50px;
+            color: white;
         }
 
         /* Estilos para o alerta */
@@ -45,9 +46,37 @@
             .alerta {
                 display: block; /* Mostra apenas em dispositivos móveis */
             }
+
+            #imgagem {
+                margin-top: 5vh; /* Reduzindo o margin-top para telas menores */
+            }
+
+            img {
+                max-width: 90%; /* Ajustando o tamanho máximo da imagem */
+            }
+
+            #nome {
+                font-size: 130%; /* Reduzindo o tamanho do texto principal */
+            }
+
+            #descricao {
+                font-size: 90%; /* Reduzindo o tamanho do texto de descrição */
+            }
+
+            .sites a {
+                display: block; /* Alterando para display block para ocupar largura total */
+                margin: 10px auto; /* Centralizando horizontalmente */
+                padding: 12px 24px;
+                font-size: 16px;
+            }
+
+            footer {
+                font-size: 16px; /* Reduzindo o tamanho da fonte do rodapé */
+                position: relative; /* Mudando posição do rodapé */
+            }
         }
 
-        /* Estilos para o conteúdo principal (mantidos do código original) */
+        /* Estilos para o conteúdo principal */
         #imgagem {
             text-align: center;
             margin-top: 10vh;
@@ -65,7 +94,6 @@
         }
 
         #nome {
-            color: white;
             text-align: center;
             margin-top: 2vh;
             font-size: 150%;
@@ -73,7 +101,6 @@
 
         #descricao {
             text-align: center;
-            color: white;
             font-size: 100%;
             margin-top: 2vh;
             line-height: 1.8;
@@ -106,7 +133,6 @@
         #contato {
             text-align: center;
             margin-top: 4vh;
-            color: white;
         }
 
         #contato p {
@@ -119,8 +145,6 @@
             background-color: #333;
             color: white;
             padding: 20px 0;
-            position: absolute;
-            bottom: 0;
             width: 100%;
             font-size: 18px;
         }
@@ -139,7 +163,6 @@
         }
 
         .logotipo {
-            color: white;
             padding: 15px 30px;
             background-image: linear-gradient(45deg, dodgerblue, #2016f0);
             border-radius: 30px;
